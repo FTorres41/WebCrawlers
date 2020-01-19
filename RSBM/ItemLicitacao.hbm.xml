@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.ItemLicitacao" table="licitacoes_itens">
+
+    <id name="Id" column="idlicitacoes_itens" >
+      <generator class="native"/>
+    </id>
+
+    <property column ="descricao" name="Descricao"/>
+
+    <property column ="numero" name="Numero"/>
+
+    <property column ="tipo" name="Tipo"/>
+
+    <property column ="codigo" name="Codigo" />
+    
+    <property column ="quantidade" name="Quantidade" />
+
+    <property column ="unidade" name="Unidade" />
+    
+    <property column ="descricao_detalhada" name="DescricaoDetalhada" />
+
+    <property column ="tratamento_diferenciado" name="TratamentoDiferenciado" />
+
+    <property column ="decreto_7174" name="Decreto7174" />
+
+    <property column ="margem_preferencia" name="MargemPreferencia" />
+
+  </class>
+</hibernate-mapping>
+

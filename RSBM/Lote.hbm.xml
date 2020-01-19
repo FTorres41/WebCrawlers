@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.Lote" table="lotes">
+
+    <id name="Id" column="idlotes" >
+      <generator class="native"/>
+    </id>
+
+    <property column ="idfonte" name="IdFonte"/>
+
+    <property column ="data" name="Data"/>
+
+    <property column ="licitacao" name="Licitacao"/>
+
+    <property column ="status" name="Status"/>
+
+    <property column ="iddigitador" name="IdDigitador" />
+
+    <property column ="idcadastrador" name="IdCadastrador"/>
+
+    <property column ="data_cadastro_lote" name="DataCadastroLote"/>
+
+    <property column ="idrota_lote" name="IdRotaLote"/>
+
+    <property column ="data_finalizacao_lote" name="DataFinalizacaoLote"/>
+
+
+  </class>
+</hibernate-mapping>
+

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.Licitacao" table="licitacoes">
+
+    <id name="Id" column="idlicitacoes" >
+      <generator class="native"/>
+    </id>
+
+    <property column ="id_fonte" name="IdFonte"/>
+
+    <many-to-one name="Orgao" class="RSBM.Models.Orgao" lazy="false"
+                not-found="ignore" column="idorgao" not-null="false"/>
+
+    <!--<set name="LicitacoesArquivo" table="licitacao_arquivo" cascade="all"
+            lazy="false" inverse="false">
+      <key column="idlicitacao" not-null="true"></key>
+      <one-to-many class="RSBM.Models.LicitacaoArquivo" />
+    </set>-->
+
+    <set name="ItensLicitacao" table="licitacoes_itens" cascade="all"
+                lazy="false" inverse="false">
+      <key column="idlicitacao" not-null="true"></key>
+      <one-to-many class="RSBM.Models.ItemLicitacao" />
+    </set>
+
+    <property column ="departamento" name="Departamento"/>
+
+    <property name="EstadoFonte" type="string">
+      <column name="estado_fonte" sql-type="char(2)"></column>
+    </property>
+
+    <property column ="cidade_fonte" name="CidadeFonte" />
+
+    <property column ="num" name="Num"/>
+
+    <property column ="processo" name="Processo"/>
+
+    <property column ="pag" name="Pag"/>
+
+    <property column ="abertura_data" name="AberturaData"/>
+
+    <property column ="entrega_data" name="EntregaData"/>
+
+    <many-to-one name="Modalidade" class="RSBM.Models.Modalidade" lazy="false"
+               column="idmodalidade"/>
+
+    <property column ="uasg" name="Uasg"/>
+
+    <property column ="num_pregao" name="NumPregao"/>
+
+    <property column ="objeto" name="Objeto"/>
+
+    <property column ="valor_edital" name="ValorEdital"/>
+
+    <property column ="valor_max" name="ValorMax"/>
+
+    <property column ="link_edital" name="LinkEdital"/>
+
+    <property column ="sem_edital" name="SemEdital"/>
+
+    <property column ="edital_indisponivel" name="EditalIndisponivel"/>
+
+    <!--<property column ="datahora_prazo_edital" name="DataHoraPrazoEdital"/>-->
+
+    <property column ="sem_edital_justificativa" name="SemEditalJustificativa"/>
+
+    <property column ="link_site" name="LinkSite"/>
+
+    <property column ="email" name="Email"/>
+
+    <property column ="observacoes" name="Observacoes"/>
+
+    <property column ="cep" name="Cep"/>
+
+    <property column ="endereco" name="Endereco"/>
+
+    <property column ="num_endereco" name="NumEndereco"/>
+
+    <property column ="complemento" name="Complemento"/>
+
+    <property column ="bairro" name="Bairro"/>
+
+    <property column ="cidade" name="Cidade"/>
+
+    <property column ="estado" name="Estado"/>
+
+    <many-to-one name="Lote" class="RSBM.Models.Lote" lazy="false"
+               column="id_lote" not-found="ignore"/>
+
+    <!--<property column ="abertura_tela_data" name="AberturaTelaData"/>-->
+
+    <property column ="digitacao_usuario" name="DigitacaoUsuario"/>
+
+    <!--<property column ="processamento_data" name="ProcessamentoData"/>-->
+
+    <property column ="processamento_usuario" name="ProcessamentoUsuario"/>
+
+    <property column ="excluido" name="Excluido"/>
+
+    <property column ="idlicitacao_fonte" name="IdLicitacaoFonte"/>
+
+    <property column ="segmento_aguardando_edital" name="SegmentoAguardandoEdital"/>
+
+    <!--<property column ="digitacao_data" name="DigitacaoData" insert="false" update="false"/>-->
+
+    <!--<property name="AcessoData" type="DateTime">
+      <column name="acesso_data" sql-type="timestamp"></column>-->
+    <!--</property>-->
+	  
+    <property column="situacao" name="Situacao"/>
+
+  </class>
+</hibernate-mapping>

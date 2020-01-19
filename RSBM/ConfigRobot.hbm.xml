@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.ConfigRobot" table="configrobot">
+
+    <id name="Id" column="id_config_robot" >
+      <generator class="increment"/>
+    </id>
+
+    <property column ="mode" name ="Mode"/>
+
+    <property column ="interval_min" name ="IntervalMin"/>
+
+    <property column ="schedule_time" name ="ScheduleTime"/>
+
+    <property column ="active" name ="Active"/>
+
+    <property column ="name" name ="Name"/>
+
+    <property  name="PreTypedDate">
+      <column name="pre_typed_date" default="null"/>
+    </property>
+
+    <property  name="LastDate">
+      <column name="last_date" default="null"/>
+    </property>
+    
+    <property column ="num_licit_last" name="NumLicitLast"/>
+
+    <property column ="status" name="Status"/>
+
+    <property name="NextDate">
+      <column name="next_date" default="null"/>
+    </property>
+    
+  </class>
+</hibernate-mapping>
+  

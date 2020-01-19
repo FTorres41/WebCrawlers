@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.Cidade" table="cep_cidade">
+
+    <composite-id>
+      <key-property column="id_cidade" name ="Id"/>
+      <key-property column="id_uf" name ="IdUf"/>
+    </composite-id>
+
+    <property column ="nome" name="Nome"/>
+
+    <property column ="cep" name="Cep"/>
+
+    <property column ="sub_cidade" name="SubCidade"/>
+
+  </class>
+</hibernate-mapping>
+

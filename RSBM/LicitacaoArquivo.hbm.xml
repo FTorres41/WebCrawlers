@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.LicitacaoArquivo" table="licitacao_arquivo">
+
+    <id name="Id" column="idlicitacao_arquivo" >
+      <generator class="native"/>
+    </id>
+
+    <property column ="nome_arquivo" name="NomeArquivo"/>
+
+    <property column ="nome_arquivo_original" name="NomeArquivoOriginal"/>
+
+    <property column ="nome_arquivo_fonte" name="NomeArquivoFonte"/>
+
+    <property column ="conteudo" name="Conteudo"/>
+
+    <property column ="status" name="Status" />
+
+    <property column ="idlicitacao" name="IdLicitacao" />
+
+  </class>
+</hibernate-mapping>
+

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.Orgao" table="orgaos">
+
+    <id name="Id" column="idorgaos" >
+      <generator class="native"/>
+    </id>
+
+    <property column ="nome" name="Nome"/>
+
+    <property name ="Estado" type="string">
+      <column name="estado" sql-type="char(2)"></column>
+    </property>
+
+  </class>
+</hibernate-mapping>
+

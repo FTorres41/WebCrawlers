@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.Preco" table="precos">
+
+    <id name="Id" column="id_preco" >
+      <generator class="native"/>
+    </id>
+
+    <property column ="id_licitacao" name="IdLicitacao"/>
+
+    <property column ="item" name="Item"/>
+
+    <property column ="descricao" name="Descricao"/>
+
+    <property column ="quantidade" name="Quantidade"/>
+
+    <property column ="valor_estimado" name="ValorEstimado"/>
+
+    <property column ="valor_homologado" name="ValorHomologado"/>
+
+    <property column ="data_homologacao" name="DataHomologacao"/>
+
+    <property column ="data_insercao" name="DataInsercao"/>
+
+  </class>
+</hibernate-mapping>
+

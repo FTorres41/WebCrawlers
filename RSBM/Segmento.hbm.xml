@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.Segmento" table="segmentos">
+    
+    <id name="IdSegmento" column="idsegmentos">
+      <generator class="native"/>
+    </id>
+
+    <property column="nome" name="Nome"/>
+    
+    <property column="filiacao" name="Filiacao"/>
+  
+    <property column="gastos_governo_ultimo_ano" name="GastosGovernoUltimoAno"/>
+  
+    <property column="cod_interno" name="CodigoInterno"/>
+
+    <property column="imagem" name="Imagem"/>
+  
+    <property column="status" name="Status"/>
+  
+    <property column="palavras_chave" name="PalavrasChave"/>
+    
+  </class>
+</hibernate-mapping>

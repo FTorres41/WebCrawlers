@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.Modalidade" table="modalidades">
+
+    <id name="Id" column="idmodalidades" >
+      <generator class="increment"/>
+    </id>
+
+    <property column="modalidades" name="Modalidades"/>
+
+  </class>
+</hibernate-mapping>
+

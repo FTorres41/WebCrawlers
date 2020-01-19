@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RSBM"
+                   namespace="RSBM.Models">
+  <class name="RSBM.Models.FontePesquisaRobot" table="fonte_pesquisa_robot">
+
+    <id name="Id" column="idfonte_pesquisa_robot" >
+      <generator class="increment"/>
+    </id>
+
+    <property column ="data_hora_pesquisa" name="DataHoraPesquisa"/>
+
+    <property column ="data_hora_processado" name="DataHoraProcessado"/>
+
+    <property column ="conteudo" name="Conteudo"/>
+
+    <property column ="status" name="Status"/>
+
+    <property  name="IdUsuario">
+      <column name="idusuario" default="null"/>
+    </property>
+
+    <property column ="idfonte_pesquisa" name="IdFontePesquisa"/>
+
+  </class>
+</hibernate-mapping>
